@@ -1,0 +1,23 @@
+﻿<Window x:Class="ImageResizeUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="365" Width="535" ResizeMode="NoResize">
+    <Grid>
+        <RichTextBox x:Name="rtb" HorizontalAlignment="Left" Height="253" VerticalAlignment="Top" Width="497" Margin="10,56,0,0">
+            <FlowDocument>
+                <Paragraph LineHeight="1">
+                    <Run/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Select Directory" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" Height="41" Click="Select_Directory_Click"/>
+        <ComboBox x:Name="comboBox" SelectedIndex="0" HorizontalAlignment="Left" Margin="134,10,0,0" VerticalAlignment="Top" Width="120" Height="29"/>
+        <Button Content="Resize" HorizontalAlignment="Left" Margin="397,10,0,0" VerticalAlignment="Top" Width="110" Height="41" Click="Resize_Click"/>
+        <TextBlock x:Name="hintHeight" HorizontalAlignment="Left" Foreground="Gray" Opacity=".6" Margin="278,33,0,0" TextWrapping="Wrap" Text="Height (Default 133)" VerticalAlignment="Top"/>
+        <TextBlock x:Name="hintWidth" HorizontalAlignment="Left" Foreground="Gray" Opacity=".6" Margin="278,11,0,0" TextWrapping="Wrap" Text="Width (Default 640)" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="txtHeight" Background="Transparent" TextChanged="txtHeight_TextChanged" HorizontalAlignment="Left" Height="18" Margin="273,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <TextBox x:Name="txtWidth" Background="Transparent" TextChanged="txtWidth_TextChanged" HorizontalAlignment="Left" Height="18" Margin="273,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        
+    </Grid>
+</Window>
